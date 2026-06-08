@@ -3,150 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dr. Mana Taheri — Learning Design, Innovation &amp; Visual Storytelling</title>
-  <meta name="description" content="Dr. Mana Taheri helps organizations turn complexity into clarity — through learning experience design, innovation consulting, and visual storytelling." />
-  <link rel="stylesheet" href="styles.css" />
+  <title>Dr. Mana Taheri — Coming soon</title>
+  <meta name="description" content="manataheri.com is under construction. See you soon." />
+  <meta name="robots" content="noindex" />
+  <style>
+    :root {
+      --ink: #1c1c1a;
+      --ink-soft: #4a4a45;
+      --muted: #8a8a82;
+      --paper: #faf8f3;
+      --accent: #b4543a;
+      --font-serif: "Georgia", "Times New Roman", serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      font-family: var(--font-sans);
+      color: var(--ink);
+      background: var(--paper);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 28px;
+    }
+    .card { max-width: 540px; }
+    .brand {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      letter-spacing: .02em;
+      margin-bottom: 40px;
+    }
+    .brand span { color: var(--accent); }
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: .78rem;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: clamp(2rem, 6vw, 3rem);
+      line-height: 1.15;
+      margin: 0 0 18px;
+    }
+    p.lead {
+      color: var(--ink-soft);
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .meta {
+      margin-top: 44px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+  </style>
 </head>
 <body>
-  <!-- ===== Header ===== -->
-  <header class="site-header">
-    <div class="wrap nav">
-      <a class="brand" href="index.html">Mana<span>.</span>Taheri</a>
-      <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
-      <nav class="nav-links" id="navlinks">
-        <a href="index.html" class="active">About</a>
-        <a href="learning.html">Learning Design</a>
-        <a href="innovation.html">Innovation</a>
-        <a href="visual.html">Visual Storytelling</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- ===== Hero ===== -->
-  <section class="hero">
-    <div class="wrap">
-      <p class="eyebrow">Learning Design · Innovation &amp; Social Impact · Visual Storytelling</p>
-      <h1>Turning complexity into clarity, and ideas into impact.</h1>
-      <p class="lead">I help people and organizations design transformational learning experiences, unlock creativity, and build future-ready capabilities.</p>
-      <p class="meta">Dr. Mana Taheri · Berlin, Germany</p>
-      <a class="btn" href="contact.html">Get in touch</a>
-    </div>
-  </section>
-
-  <!-- ===== Services ===== -->
-  <section>
-    <div class="wrap">
-      <p class="section-label">What I do</p>
-      <h2 class="section-title">Three disciplines, one practice.</h2>
-      <p class="section-intro">Across more than a decade of freelance and in-house work, my practice has grown around three connected ways of creating change — designing how people learn, guiding how organizations innovate, and making complex ideas visible.</p>
-
-      <div class="services">
-        <article class="service-card">
-          <div class="num">01</div>
-          <h3>Learning Experience Design</h3>
-          <p>I design and run learning experiences, capability-building programs, and Train-the-Trainer formats — grounded in human-centered design and built for real-world transfer, not just theory.</p>
-          <a class="more" href="learning.html">Learn more</a>
-        </article>
-
-        <article class="service-card">
-          <div class="num">02</div>
-          <h3>Innovation &amp; Social Impact</h3>
-          <p>As a consultant and coach, I structure user-centered innovation processes — from research and design sprints to strategic foresight — helping teams move from insight to scalable, purpose-driven impact.</p>
-          <a class="more" href="innovation.html">Learn more</a>
-        </article>
-
-        <article class="service-card">
-          <div class="num">03</div>
-          <h3>Visual Storytelling</h3>
-          <p>Through graphic recording, visual facilitation, and illustration, I make conversations and ideas tangible — turning complexity into clear, shared pictures that move groups forward.</p>
-          <a class="more" href="visual.html">Learn more</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Audience strip ===== -->
-  <section class="alt">
-    <div class="wrap">
-      <h2 class="section-title" style="max-width:34ch;">I work with organizations that see learning and design not as one-off events, but as strategic levers for capability-building and transformation.</h2>
-    </div>
-  </section>
-
-  <!-- ===== Collaborators ===== -->
-  <section>
-    <div class="wrap">
-      <p class="section-label">Selected collaborations</p>
-      <p class="section-intro">From global corporates to academic institutions and social-impact programs, I've partnered with a wide range of organizations and teams.</p>
-      <div class="logos">
-        <span class="chip">Steelcase</span>
-        <span class="chip">Hasso Plattner Institute</span>
-        <span class="chip">HPI School of Design Thinking</span>
-        <span class="chip">HPI Academy</span>
-        <span class="chip">HPI–Stanford Research Program</span>
-        <span class="chip">openHPI</span>
-        <span class="chip">University of Potsdam</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Facts ===== -->
-  <section style="padding-top:0;">
-    <div class="wrap">
-      <div class="facts">
-        <div class="fact"><div class="n">10+</div><div class="l">years in innovation, impact &amp; design</div></div>
-        <div class="fact"><div class="n">15</div><div class="l">cities reached by the Better Is Possible challenge</div></div>
-        <div class="fact"><div class="n">300+</div><div class="l">participants engaged across programs</div></div>
-        <div class="fact"><div class="n">3</div><div class="l">MOOCs designed on human-centered design</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== About ===== -->
-  <section class="alt" id="about">
-    <div class="wrap">
-      <p class="section-label">About me</p>
-      <div class="about-grid">
-        <div>
-          <h2>Three professions, one profile.</h2>
-          <p>My path runs through strategy, design, and education. I hold a doctorate in Innovation Management and Entrepreneurship (University of Potsdam) and an M.Sc. in Economics and Management (Humboldt-Universität zu Berlin), complemented by a Futures Studies and Speculative Design certificate from Parsons School of Design.</p>
-          <p>For nearly nine years I was part of the teaching team at the Hasso Plattner Institute — coaching multidisciplinary teams at the School of Design Thinking, leading programs at HPI Academy, and researching digital learning with the HPI–Stanford Design Thinking Research Program. More recently, I led social innovation at Steelcase, designing its first global Better Is Possible Design Challenge.</p>
-          <p>I bring together strategy, stakeholder engagement, and learning experience design to empower people to innovate with purpose — driven by a belief in design as a tool for equity and impact.</p>
-        </div>
-        <div class="disciplines">
-          <div class="discipline"><strong>Learning Design</strong><span>Human-centered learning that sticks</span></div>
-          <div class="discipline"><strong>Innovation &amp; Social Impact</strong><span>From insight to scalable change</span></div>
-          <div class="discipline"><strong>Visual Storytelling</strong><span>Making complexity visible</span></div>
-          <div class="discipline"><strong>Foundations</strong><span>Dr. rer. pol. · M.Sc. · Design Thinking · Futures Studies</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Contact CTA ===== -->
-  <section>
-    <div class="wrap">
-      <div class="contact-card">
-        <h2>Let's start a conversation.</h2>
-        <p>Whether you have an idea, a project, or simply a question — I'd love to hear from you. I reply promptly, whether for an informal exchange of thoughts or a concrete proposal.</p>
-        <a class="contact-email" href="mailto:manataheri@gmail.com">manataheri@gmail.com</a>
-        <div><a class="btn ghost" href="contact.html">More ways to connect</a></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Footer ===== -->
-  <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <a class="brand" href="index.html">Mana<span>.</span>Taheri</a>
-      <nav class="footer-links">
-        <a href="learning.html">Learning Design</a>
-        <a href="innovation.html">Innovation</a>
-        <a href="visual.html">Visual Storytelling</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <p class="copyright">© 2026 Dr. Mana Taheri · Berlin, Germany</p>
-    </div>
-  </footer>
+  <div class="card">
+    <div class="brand">Mana<span>.</span>Taheri</div>
+    <p class="eyebrow">Coming soon</p>
+    <h1>This website is under construction.<br />See you soon!</h1>
+    <p class="lead">Something thoughtful is on its way.</p>
+    <p class="meta">Dr. Mana Taheri · Berlin, Germany</p>
+  </div>
 </body>
 </html>
