@@ -11,7 +11,7 @@
       --ink: #1c1c1a;
       --ink-soft: #4a4a45;
       --muted: #8a8a82;
-      --paper: #faf8f3;
+      --paper: #efe9e0;       /* warm soft grey */
       --accent: #b4543a;
       --font-serif: "Georgia", "Times New Roman", serif;
       --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -21,14 +21,26 @@
     body {
       font-family: var(--font-sans);
       color: var(--ink);
-      background: var(--paper);
+      /* warm grey base with a faint diagonal rainbow wash */
+      background:
+        linear-gradient(118deg,
+          transparent 24%,
+          rgba(120, 170, 255, 0.22) 39%,
+          rgba(125, 225, 200, 0.22) 48%,
+          rgba(255, 235, 130, 0.26) 57%,
+          rgba(255, 150, 200, 0.26) 66%,
+          transparent 84%),
+        var(--paper);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       padding: 28px;
     }
-    .card { max-width: 540px; }
+    .card { max-width: 640px; }
     .brand {
       font-family: var(--font-serif);
       font-size: 1.4rem;
@@ -46,10 +58,11 @@
     h1 {
       font-family: var(--font-serif);
       font-weight: 400;
-      font-size: clamp(2rem, 6vw, 3rem);
-      line-height: 1.15;
+      font-size: clamp(1.05rem, 4.4vw, 1.9rem);
+      line-height: 1.2;
       margin: 0 0 18px;
     }
+    h1 .l1 { white-space: nowrap; }
     p.lead {
       color: var(--ink-soft);
       font-size: 1.1rem;
@@ -71,9 +84,9 @@
 </head>
 <body>
   <div class="card">
-    <div class="brand">Mana<span>.</span>Taheri</div>
+    <div class="brand">Mana Taheri</div>
     <p class="eyebrow">Coming soon</p>
-    <h1>This website is under construction.<br />See you soon!</h1>
+    <h1><span class="l1">This website is under construction.</span><br />See you soon!</h1>
     <p class="lead">Something thoughtful is on its way.</p>
     <img class="illus" src="construction.png" alt="Illustration of a shovel in a mound of earth" />
     <p class="meta">Dr. Mana Taheri</p>
