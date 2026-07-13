@@ -3,92 +3,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dr. Mana Taheri — Coming soon</title>
-  <meta name="description" content="manataheri.com is under construction. See you soon." />
-  <meta name="robots" content="noindex" />
-  <style>
-    :root {
-      --ink: #1c1c1a;
-      --ink-soft: #4a4a45;
-      --muted: #8a8a82;
-      --paper: #efe9e0;       /* warm soft grey */
-      --accent: #b4543a;
-      --font-serif: "Georgia", "Times New Roman", serif;
-      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    }
-    * { box-sizing: border-box; }
-    html, body { height: 100%; margin: 0; }
-    body {
-      font-family: var(--font-sans);
-      color: var(--ink);
-      /* warm grey base with a faint diagonal rainbow wash */
-      background:
-        linear-gradient(118deg,
-          transparent 24%,
-          rgba(120, 170, 255, 0.22) 39%,
-          rgba(125, 225, 200, 0.22) 48%,
-          rgba(255, 235, 130, 0.26) 57%,
-          rgba(255, 150, 200, 0.26) 66%,
-          transparent 84%),
-        var(--paper);
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      background-size: cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 28px;
-    }
-    .card { max-width: 640px; }
-    .brand {
-      font-family: var(--font-serif);
-      font-size: 1.4rem;
-      letter-spacing: .02em;
-      margin-bottom: 40px;
-    }
-    .brand span { color: var(--accent); }
-    .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: .14em;
-      font-size: .78rem;
-      color: var(--accent);
-      margin-bottom: 20px;
-    }
-    h1 {
-      font-family: var(--font-serif);
-      font-weight: 400;
-      font-size: clamp(1.05rem, 4.4vw, 1.9rem);
-      line-height: 1.2;
-      margin: 0 0 18px;
-    }
-    h1 .l1 { white-space: nowrap; }
-    p.lead {
-      color: var(--ink-soft);
-      font-size: 0.9rem;
-      line-height: 1.6;
-      margin: 0;
-    }
-    .illus {
-      display: block;
-      width: clamp(180px, 45vw, 260px);
-      height: auto;
-      margin: 36px auto 0;
-    }
-    .meta {
-      margin-top: 36px;
-      color: var(--muted);
-      font-size: .9rem;
-    }
-  </style>
+  <title>Dr. Mana Taheri — Designer, Educator &amp; Facilitator</title>
+  <meta name="description" content="Mana Taheri helps organizations and teams make sense of complexity and move through change — through learning design, UX design, facilitation, and visual thinking." />
+  <link rel="stylesheet" href="styles.css?v=17" />
 </head>
 <body>
-  <div class="card">
-    <div class="brand">Mana Taheri</div>
-    <h1><span class="l1">This website is under construction.</span><br />See you soon!</h1>
-    <p class="lead">Something thoughtful is on its way.</p>
-    <img class="illus" src="construction.png" alt="Illustration of a shovel in a mound of earth" />
-    <p class="meta">Dr. Mana Taheri</p>
-  </div>
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html">Dr. Mana Taheri</a>
+      <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+      <nav class="nav-links" id="navlinks">
+        <a href="index.html" class="active">About me</a>
+        <a href="projects.html">Projects</a>
+        <a href="#">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Hero (intro + photo) ===== -->
+  <section class="lander-hero">
+    <div class="wrap lander-hero-grid">
+      <div class="lander-hero-text">
+        <p class="greeting">Hi, I'm Mana</p>
+        <p class="role">Designer, Educator, &amp; Facilitator</p>
+        <p>I help organizations and teams make sense of complexity and move through change, building lasting capabilities through program design and hands-on workshops.</p>
+        <p>I bring together learning design, UX design, facilitation, and visual thinking, and draw on all four depending on what the work needs.</p>
+        <p>Born in Tehran and based in Berlin, I've worked from Havana to Istanbul to New York, and cultural humility runs through everything I do. You can find some of my work <a href="projects.html">here</a>.</p>
+      </div>
+      <div class="lander-hero-photo">
+        <img src="images/mana.jpg?v=2" alt="Portrait of Dr. Mana Taheri" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Collaborators ===== -->
+  <section class="collab-section">
+    <div class="wrap">
+      <div class="collab-band">
+        <p class="collab-intro">From global corporates to academic institutions and social-impact programs, I've partnered with a wide range of organizations and teams.<br />Here are some of my collaborators.</p>
+        <div class="logo-grid">
+          <div class="logo-tile"><img class="lg-xs" src="images/logos/steelcase.png" alt="Steelcase" /></div>
+          <div class="logo-tile"><img class="lg-xl" src="images/logos/ecb.png" alt="European Central Bank" /></div>
+          <div class="logo-tile"><img src="images/logos/giz.png" alt="GIZ" /></div>
+          <div class="logo-tile"><img class="lg-lg" src="images/logos/wikimedia-deutschland.png" alt="Wikimedia Deutschland" /></div>
+          <div class="logo-tile"><img src="images/logos/hpi.png" alt="Hasso Plattner Institut" /></div>
+          <div class="logo-tile"><img src="images/logos/hpi-dschool.png" alt="HPI d-school" /></div>
+          <div class="logo-tile"><img src="images/logos/dschool-afrika.png?v=2" alt="d-school Afrika" /></div>
+          <div class="logo-tile"><img src="images/logos/uds.png" alt="German University of Digital Science" /></div>
+          <div class="logo-tile"><img class="lg-xl" src="images/logos/humboldt-university.png" alt="Humboldt-Universität zu Berlin" /></div>
+          <div class="logo-tile"><img src="images/logos/kuehne-university.png" alt="Kühne Logistics University" /></div>
+          <div class="logo-tile"><img src="images/logos/bi-norwegian.png" alt="BI Norwegian Business School" /></div>
+          <div class="logo-tile"><img src="images/logos/melton-foundation.png" alt="Melton Foundation" /></div>
+          <div class="logo-tile"><img class="lg-sm" src="images/logos/mitost.png" alt="MitOst" /></div>
+          <div class="logo-tile"><img src="images/logos/mimi-technologies.png" alt="Mimi Technologies" /></div>
+          <div class="logo-tile"><img class="lg-sm" src="images/logos/eos.png" alt="EOS" /></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact line ===== -->
+  <section class="contact-strip">
+    <div class="wrap">
+      <p class="contact-line">Have an idea, a project, or simply a question? I'd love to hear from you.</p>
+      <a class="btn" href="contact.html">Get in touch</a>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p class="copyright">© 2026 Mana Taheri</p>
+      <div class="socials">
+        <a class="social" aria-label="Instagram" href="#">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a class="social" aria-label="LinkedIn" href="https://www.linkedin.com/in/manataheri/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.76-2.05 4.02 0 4.76 2.65 4.76 6.1V21h-4v-5.4c0-1.3-.02-2.96-1.8-2.96-1.8 0-2.08 1.4-2.08 2.86V21H9z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Human-Centered Design at Scale — Dr. Mana Taheri</title>
+  <meta name="description" content="Co-designing and running some of the first skill-based, interactive MOOCs on the openHPI platform, reaching more than 25,000 learners worldwide." />
+  <link rel="stylesheet" href="styles.css?v=22" />
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html">Dr. Mana Taheri</a>
+      <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+      <nav class="nav-links" id="navlinks">
+        <a href="index.html">About me</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="#">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Case study ===== -->
+  <section class="case">
+    <div class="wrap">
+      <a class="back-link" href="projects.html">Back to projects</a>
+      <p class="case-tags">Instructional Design · UX Research · Learning Experience Design</p>
+      <h1 class="case-title">Human-Centered Design at Scale</h1>
+
+      <div class="case-split split-media">
+        <div class="case-text">
+          <p class="case-lead"><em>How might we teach a hands-on, creative discipline like design thinking online, as an interactive, skill-building experience rather than a series of passive lectures?</em></p>
+          <p class="case-body">I co-designed and ran some of the first skill-based, interactive Massive Open Online Courses (MOOCs) on the openHPI platform, translating an inherently hands-on methodology into a format learners could practice, not just watch.</p>
+          <p class="case-body">We took an iterative approach from the outset, building a “protoMOOC” to prototype and test the learning materials before scaling, running both quantitative and qualitative UX research to sharpen the learner experience, and partnering closely with the platform’s engineering team to ship the new features the format required. Across three courses, the series reached more than 25,000 learners worldwide.</p>
+          <p class="case-body course-intro">You can explore the courses here:</p>
+          <ul class="course-links">
+            <li><a href="https://open.hpi.de/learn/insights-2017" target="_blank" rel="noopener">Inspirations for Design: A Course on Human-Centered Research</a></li>
+            <li><a href="https://open.hpi.de/learn/ideas2018" target="_blank" rel="noopener">Human-Centered Design: From Synthesis to Creative Ideas</a></li>
+            <li><a href="https://open.hpi.de/learn/prototype2019" target="_blank" rel="noopener">Human-Centered Design: Building and Testing Prototypes</a></li>
+          </ul>
+        </div>
+
+        <div class="case-media">
+          <div class="slideshow" id="slideshow">
+            <div class="slides">
+              <div class="slide is-active"><img src="images/projects/hcd/slide-3.jpg?v=2" alt="Expert talk video still from the course" /></div>
+              <div class="slide"><img src="images/projects/hcd/slide-2.jpg?v=2" alt="Storyboarding video shots, colour-coded by type" /></div>
+              <div class="slide"><img src="images/projects/hcd/slide-1.jpg" alt="Planning the course on a wall of sticky notes" /></div>
+              <div class="slide"><img src="images/projects/hcd/slide-4.jpg?v=2" alt="Learner persona developed during research" /></div>
+              <div class="slide"><img src="images/projects/hcd/slide-5.jpg?v=2" alt="Mana in a workshop setting" /></div>
+              <div class="slide"><img src="images/projects/hcd/slide-6.jpg?v=2" alt="Synthesis worksheet used in the course" /></div>
+              <div class="slide"><img src="images/projects/hcd/slide-7.jpg" alt="A learner taking the course" /></div>
+              <div class="slide"><img src="images/projects/hcd/slide-8.jpg" alt="Filming the course videos in the studio" /></div>
+            </div>
+            <button class="slide-nav prev" aria-label="Previous image">‹</button>
+            <button class="slide-nav next" aria-label="Next image">›</button>
+            <div class="slide-dots" aria-hidden="true"></div>
+            <p class="slide-counter"><span id="slideNow">1</span> / 8</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p class="copyright">© 2026 Mana Taheri</p>
+      <div class="socials">
+        <a class="social" aria-label="Instagram" href="#">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a class="social" aria-label="LinkedIn" href="https://www.linkedin.com/in/manataheri/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.76-2.05 4.02 0 4.76 2.65 4.76 6.1V21h-4v-5.4c0-1.3-.02-2.96-1.8-2.96-1.8 0-2.08 1.4-2.08 2.86V21H9z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var box = document.getElementById('slideshow');
+      var slides = box.querySelectorAll('.slide');
+      var dotsWrap = box.querySelector('.slide-dots');
+      var now = document.getElementById('slideNow');
+      var i = 0;
+      slides.forEach(function (s, idx) {
+        var d = document.createElement('button');
+        d.className = 'dot' + (idx === 0 ? ' is-active' : '');
+        d.setAttribute('aria-label', 'Go to image ' + (idx + 1));
+        d.addEventListener('click', function () { go(idx); });
+        dotsWrap.appendChild(d);
+      });
+      var dots = dotsWrap.querySelectorAll('.dot');
+      function go(n) {
+        slides[i].classList.remove('is-active');
+        dots[i].classList.remove('is-active');
+        i = (n + slides.length) % slides.length;
+        slides[i].classList.add('is-active');
+        dots[i].classList.add('is-active');
+        now.textContent = i + 1;
+      }
+      box.querySelector('.next').addEventListener('click', function () { go(i + 1); });
+      box.querySelector('.prev').addEventListener('click', function () { go(i - 1); });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight') go(i + 1);
+        if (e.key === 'ArrowLeft') go(i - 1);
+      });
+    })();
+  </script>
+  <script src="lightbox.js?v=2"></script>
+</body>
+</html>
