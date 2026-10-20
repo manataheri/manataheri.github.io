@@ -743,3 +743,6 @@ body { background: #fff; color: var(--ink); }
 .contact-section .contact-statement em { color: var(--ink); }
 .contact-section .btn { border-color: var(--ink); }
 .contact-section .btn:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
+
+/* Looping, silent video thumbnail on a project card */
+.p2-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
