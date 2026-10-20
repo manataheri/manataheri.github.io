@@ -715,8 +715,8 @@ body { background: #fff; color: var(--ink); }
   .js-motion .lander-hero-photo.settled img { transition: none; }
 }
 
-/* Collaborators band: diagonal dirty-pink gradient */
-.collab-section { background: linear-gradient(120deg, #F3E7E8 0%, #EAD9DA 35%, #DDBFC4 70%, #CFA9B1 100%); }
+/* Collaborators band: gradient from the painting's colours (lavender blue, mauve, rose, coral) */
+.collab-section { background: linear-gradient(90deg, #A2AAD8 0%, #C59DC8 33%, #E3A3AB 66%, #EE9F88 100%); }
 
 
 /* Projects page: two-column grid, title under the image */
