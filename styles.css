@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400&display=swap');
 
 /* ===========================================================
    Dr. Mana Taheri — personal site
@@ -579,3 +579,138 @@ body { min-height: 100vh; display: flex; flex-direction: column; }
 .contact-actions { margin-top: 40px; }
 .contact-actions .btn { background: var(--saffron); color: var(--aubergine); font-weight: 600; }
 .contact-actions .btn:hover { background: var(--aubergine); color: var(--plaster); }
+
+
+/* ===========================================================
+   2026-10 type treatment (Made by Sea inspired). Same palette, same two fonts,
+   swapped roles: light sans headlines, light serif body.
+   =========================================================== */
+
+/* Body copy: light serif */
+body { font-family: var(--font-serif); font-weight: 300; font-size: 17.5px; line-height: 1.6; color: var(--aubergine); }
+.lander-hero-text p, .case-body, .case-lead, .train-desc, .collab-intro, p { font-weight: 300; }
+.lander-hero-text p, .case-body, .train-desc { color: var(--aubergine); }
+
+/* UI stays sans: nav, buttons, small meta */
+.nav-links a, .btn, .back-link, .copyright, .testimonial-name, .testimonial-role, .slide-counter, .aside-cap {
+  font-family: var(--font-sans);
+}
+.nav-links a { font-weight: 400; font-size: .78rem; letter-spacing: .1em; }
+
+/* Headlines: big, light sans, tight */
+.lander-hero-text .statement, .contact-statement, .case-title, .train-title, .talk-heading, .section-title {
+  font-family: var(--font-sans); font-weight: 300; letter-spacing: -0.035em; color: var(--aubergine);
+}
+.lander-hero-text .statement { font-size: clamp(2.6rem, 5.4vw, 4.4rem); line-height: 1.0; font-variation-settings: normal; margin-bottom: 28px; }
+.case-title { font-size: clamp(2.2rem, 4.4vw, 3.6rem); line-height: 1.02; margin-bottom: 32px; max-width: 18ch; }
+.train-title { font-size: clamp(1.6rem, 2.6vw, 2.1rem); line-height: 1.08; }
+/* the accent word stays in serif italic */
+.statement em, .contact-statement em { font-family: var(--font-serif); font-weight: 300; font-style: italic; letter-spacing: -0.02em; }
+
+/* Small italic serif labels with a full-width hairline */
+.sea-label, .lander-hero-text .hello, .case-tags {
+  display: block; font-family: var(--font-serif); font-style: italic; font-weight: 400;
+  font-size: .95rem; color: var(--aubergine); letter-spacing: .01em;
+  padding-bottom: 10px; margin-bottom: 26px; border-bottom: 1px solid currentColor;
+}
+.lander-hero-text .hello { border-bottom-color: var(--line); color: var(--mauve-grey); }
+.case-tags { color: var(--rose); border-bottom-color: var(--line); }
+.collab-section .sea-label { border-bottom-color: rgba(58,33,48,.35); margin-bottom: 34px; }
+.testimonials .sea-label { border-bottom-color: var(--line); color: var(--mauve-grey); margin-bottom: 34px; }
+
+/* Collaborators intro: big light sans, like a headline */
+.collab-intro {
+  font-family: var(--font-sans); font-weight: 300; letter-spacing: -0.025em;
+  font-size: clamp(1.6rem, 2.8vw, 2.3rem); line-height: 1.15; max-width: 30ch;
+}
+
+/* Testimonials: light serif italic */
+.testimonial-quote { font-weight: 300; font-size: 1.15rem; }
+
+/* Case lead: serif italic, larger */
+.case-lead { font-size: 1.2rem; line-height: 1.5; }
+
+/* Circle-arrow back link */
+.back-link { display: inline-flex; align-items: center; gap: 10px; }
+
+/* fixes after first render */
+.lander-hero-text .statement { font-size: clamp(2.4rem, 4.6vw, 3.7rem); }
+.statement .br-wide { display: none; }
+.case-lead, .case-lead em { font-family: var(--font-serif); font-weight: 300; }
+
+/* collaborators text runs the full width again */
+.collab-intro { max-width: none; font-size: clamp(1.35rem, 2.1vw, 1.7rem); line-height: 1.25; }
+
+
+/* Colour logic (Made by Sea inspired). White ground, near-black ink,
+   one accent: dirty pink (in place of their blue). */
+:root {
+  --paper: #FFFFFF;
+  --paper-2: #FFFFFF;
+  --ink: #1F1A1C;
+  --ink-soft: #1F1A1C;
+  --aubergine: #1F1A1C;     /* all "dark" text becomes near-black */
+  --mauve-grey: #5E5759;
+  --muted: #8C8486;
+  --line: #E6DEDF;          /* soft line for image borders, dots, menus; label rules use --ink */
+  --accent: #8E4A5B;        /* dirty pink, deep */
+  --rose: #8E4A5B;
+  --accent-soft: #EAD9DA;
+  --pink-band: #EAD9DA;     /* dirty pink, pale: replaces their pale blue */
+}
+body { background: #fff; color: var(--ink); }
+.site-header { background: rgba(255,255,255,.92); }
+.nav-links a.active { color: var(--ink); text-decoration-color: var(--ink); text-decoration-thickness: 1px; }
+
+/* hairline labels: black lines */
+.lander-hero-text .hello, .case-tags, .testimonials .sea-label { border-bottom-color: var(--ink); color: var(--ink); }
+.case-tags { color: var(--rose); }
+
+/* Links: thin black underline */
+.lander-hero-text p a { color: var(--ink); border-bottom-color: var(--ink); }
+
+/* Feature band in dirty pink, with pink type (their blue band) */
+.collab-section { background: var(--pink-band); }
+.collab-section .sea-label { color: var(--ink); border-bottom-color: var(--ink); }
+.collab-intro { color: var(--ink); }
+.collab-section .logo-tile img {
+  filter: brightness(0);
+  opacity: .85;
+}
+
+/* Footer: plain white with a hairline, like theirs */
+.site-footer { background: #fff; border-top: 1px solid var(--ink); }
+.site-footer .copyright, .site-footer .socials .social { color: var(--ink); }
+.site-footer .socials .social:hover { color: var(--rose); }
+
+/* Buttons: black outline, pink on hover */
+.contact-actions .btn, .btn { background: transparent; color: var(--ink); border: 1px solid var(--ink); font-weight: 500; }
+.contact-actions .btn:hover, .btn:hover { background: var(--rose); border-color: var(--rose); color: #fff; }
+
+/* testimonial body */
+.testimonial-quote { color: var(--ink); }
+.testimonial-role { color: var(--muted); }
+
+
+/* Page motion (used with motion.js) (inspired by Made by Sea) */
+@media (prefers-reduced-motion: no-preference) {
+  .js-motion .split .w { display: inline-block; overflow: hidden; vertical-align: bottom; padding-bottom: .08em; margin-bottom: -.08em; }
+  .js-motion .split .wi { display: inline-block; transform: translateY(105%); transition: transform 1s cubic-bezier(.2,.7,.1,1); }
+  .js-motion .split.in .wi { transform: none; }
+
+  .js-motion .hello { border-bottom-color: transparent !important; position: relative; }
+  .js-motion .hello::after, .js-motion .sea-label::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 1px; background: currentColor;
+    transform: scaleX(0); transform-origin: left; transition: transform 1.2s cubic-bezier(.2,.7,.1,1) .1s;
+  }
+  .js-motion .sea-label { position: relative; border-bottom-color: transparent !important; }
+  .js-motion .in.hello::after, .js-motion .in.sea-label::after { transform: scaleX(1); }
+
+  .js-motion .reveal { opacity: 0; transform: translateY(28px); transition: opacity 1s ease, transform 1s cubic-bezier(.2,.7,.1,1); }
+  .js-motion .reveal.in { opacity: 1; transform: none; }
+
+  .js-motion .lander-hero-photo { overflow: hidden; border-radius: 10px; }
+  .js-motion .lander-hero-photo img { transform: scale(1.12); transition: transform 1.8s cubic-bezier(.2,.7,.1,1); will-change: transform; }
+  .js-motion .lander-hero-photo.in img { transform: scale(var(--parallax, 1)); transition: transform 1.8s cubic-bezier(.2,.7,.1,1); }
+  .js-motion .lander-hero-photo.settled img { transition: none; }
+}
