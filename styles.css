@@ -733,3 +733,13 @@ body { background: #fff; color: var(--ink); }
 .p2-img .project-logo { left: 22px; bottom: 22px; height: 34px; }
 .p2-img .project-logo.lg { height: 46px; }
 .p2-img .project-logo.lower { bottom: 16px; }
+
+/* Contact page: same painting gradient as the collaborators band, filling the page down to the footer */
+.contact-section {
+  flex: 1; display: flex; align-items: center;
+  background: linear-gradient(90deg, #A2AAD8 0%, #C59DC8 33%, #E3A3AB 66%, #EE9F88 100%);
+}
+.contact-section > .wrap { width: 100%; }
+.contact-section .contact-statement em { color: var(--ink); }
+.contact-section .btn { border-color: var(--ink); }
+.contact-section .btn:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
