@@ -29,7 +29,7 @@
   // 2. Things that rise into view
   const rise = [
     '.lander-hero-text > p:not(.hello)', '.collab-section .logo-tile', '.testimonial',
-    '.case-lead', '.case-body', '.case-media', '.slideshow', '.contact-actions', '.project-card'
+    '.case-lead', '.case-body', '.case-media', '.slideshow', '.contact-actions', '.project-card', '.p2-card'
   ];
   document.querySelectorAll(rise.join(',')).forEach(el => el.classList.add('reveal'));
 
@@ -38,6 +38,7 @@
   stagger('.collab-section .logo-tile', 0.04);
   stagger('.testimonial', 0.12);
   stagger('.project-card', 0.08);
+  stagger('.p2-card', 0.08);
   document.querySelectorAll('.lander-hero-text > p:not(.hello)').forEach((el, i) => el.style.transitionDelay = (0.7 + i * 0.12) + 's');
 
   const targets = document.querySelectorAll('.split, .reveal, .hello, .sea-label, .lander-hero-photo');

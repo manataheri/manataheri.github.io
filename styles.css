@@ -714,3 +714,22 @@ body { background: #fff; color: var(--ink); }
   .js-motion .lander-hero-photo.in img { transform: scale(var(--parallax, 1)); transition: transform 1.8s cubic-bezier(.2,.7,.1,1); }
   .js-motion .lander-hero-photo.settled img { transition: none; }
 }
+
+/* Collaborators band: diagonal dirty-pink gradient */
+.collab-section { background: linear-gradient(120deg, #F3E7E8 0%, #EAD9DA 35%, #DDBFC4 70%, #CFA9B1 100%); }
+
+
+/* Projects page: two-column grid, title under the image */
+
+.p2-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px 40px; }
+.p2-card { display: block; }
+.p2-img { display: block; aspect-ratio: 4 / 3; border-radius: 10px; background: #ddd center/cover no-repeat; transition: transform .5s cubic-bezier(.2,.7,.1,1); }
+.p2-card:hover .p2-img { transform: scale(.985); }
+.p2-tags { display: block; margin-top: 18px; font-family: var(--font-serif); font-style: italic; font-size: .92rem; color: var(--rose); }
+.p2-title { display: block; margin-top: 6px; font-family: var(--font-sans); font-weight: 300; font-size: clamp(1.5rem, 2.4vw, 2.1rem); line-height: 1.1; letter-spacing: -0.03em; color: var(--ink); }
+.p2-card:not(:has(.p2-tags)) .p2-title { margin-top: 18px; }
+@media (max-width: 760px) { .p2-grid { grid-template-columns: 1fr; gap: 44px; } }
+.p2-img { position: relative; overflow: hidden; }
+.p2-img .project-logo { left: 22px; bottom: 22px; height: 34px; }
+.p2-img .project-logo.lg { height: 46px; }
+.p2-img .project-logo.lower { bottom: 16px; }
