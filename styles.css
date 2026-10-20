@@ -1,20 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap');
+
 /* ===========================================================
    Dr. Mana Taheri — personal site
    Shared stylesheet
    =========================================================== */
 
 :root {
-  --ink: #1c1c1a;
-  --ink-soft: #4a4a45;
-  --muted: #8a8a82;
-  --line: #e9e4e0;
-  --paper: #faf9f7;       /* near-white, faint warm tint */
-  --paper-2: #f2efec;
-  --accent: #8e4a5b;     /* deep dusty pink from the painting */
-  --accent-soft: #e6d2d7;
+  /* Palette */
+  --plaster: #F5EFE8;
+  --aubergine: #3A2130;
+  --rose: #8E4A5B;
+  --saffron: #C8963E;
+  --blush: #EAD9DA;
+  --mauve-grey: #6E5560;
+
+  /* Roles (mapped onto the palette) */
+  --ink: var(--aubergine);
+  --ink-soft: var(--mauve-grey);
+  --muted: #94808A;
+  --line: #E4D6D3;
+  --paper: var(--plaster);
+  --paper-2: #EFE4E0;
+  --accent: var(--rose);
+  --accent-soft: var(--blush);
   --max: 1120px;
-  --font-serif: "Georgia", "Times New Roman", serif;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-serif: 'Newsreader', Georgia, serif;
+  --font-sans: 'Hanken Grotesk', -apple-system, 'Segoe UI', sans-serif;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -40,7 +51,7 @@ h1, h2, h3, h4, .greeting, .section-title, .case-title { color: var(--ink-soft);
 /* ---------- Header / nav ---------- */
 .site-header {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(250, 249, 247, 0.85);
+  background: rgba(245, 239, 232, 0.88);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
 }
@@ -92,7 +103,7 @@ h1, h2, h3, h4, .greeting, .section-title, .case-title { color: var(--ink-soft);
   font-size: .82rem; text-transform: uppercase; letter-spacing: .12em;
   transition: background .2s, transform .2s;
 }
-.btn:hover { background: #743c4a; transform: translateY(-1px); }
+.btn:hover { background: var(--aubergine); transform: translateY(-1px); }
 .btn.ghost {
   background: transparent; color: var(--accent);
   border: 1px solid var(--accent);
@@ -489,3 +500,82 @@ section { padding: clamp(56px, 8vw, 96px) 0; }
   .facts { grid-template-columns: 1fr 1fr; }
   .project-grid { grid-template-columns: 1fr; }
 }
+
+
+/* ===========================================================
+   2026-10 redesign: plaster / aubergine / rose / saffron,
+   Newsreader + Hanken Grotesk
+   =========================================================== */
+
+/* Headings in aubergine, serif titles in the lighter weight */
+h1, h2, h3, h4, .greeting, .section-title, .case-title, .contact-line, .brand { color: var(--aubergine); }
+.case-title, .section-title, .hero h1, .train-title, .talk-heading { font-weight: 400; }
+.train-title, .talk-heading { color: var(--aubergine); }
+
+/* Header: no brand name, no rule underneath */
+.site-header { border-bottom: 0; }
+.nav { justify-content: flex-end; }
+.nav-links a.active { text-decoration: underline 2px var(--saffron); text-underline-offset: 9px; }
+
+/* Links: saffron underline */
+.lander-hero-text p a, .testimonial-link { border-bottom-color: var(--saffron); }
+.lander-hero-text p a:hover, .testimonial-link:hover { color: var(--aubergine); }
+.discipline, .quote-block { border-left-color: var(--saffron); }
+.feature-list li::before { color: var(--saffron); }
+
+/* Homepage hero */
+.lander-hero-text .hello {
+  font-family: var(--font-serif); font-size: 1.2rem; color: var(--aubergine);
+  margin-bottom: 10px; max-width: none;
+}
+.lander-hero-text .statement {
+  font-family: var(--font-serif); font-weight: 400; color: var(--aubergine);
+  font-size: clamp(2.2rem, 4.4vw, 3.4rem); line-height: 1.08; letter-spacing: -0.015em;
+  font-variation-settings: "opsz" 72; margin-bottom: 18px;
+}
+.statement em { font-style: italic; color: var(--rose); }
+.lander-hero-photo { max-width: 380px; justify-self: end; }
+@media (min-width: 901px) {
+  .lander-hero-grid { grid-template-columns: minmax(0, 1fr) 380px; gap: clamp(32px, 4vw, 52px); }
+  .lander-hero-text p { max-width: 62ch; }
+}
+@media (max-width: 900px) {
+  .lander-hero-photo { max-width: 340px; justify-self: start; }
+  .br-wide { display: none; }
+}
+
+/* Collaborators: saffron band */
+.collab-section { margin-top: clamp(40px, 6vw, 80px); padding: clamp(56px, 7vw, 88px) 0; background: var(--saffron); }
+.collab-intro {
+  font-family: var(--font-serif); color: var(--aubergine);
+  font-size: clamp(1.35rem, 2.2vw, 1.75rem); line-height: 1.35; letter-spacing: -0.005em;
+}
+.collab-section .logo-tile img { filter: brightness(0); opacity: .78; }
+.collab-section .logo-tile:hover img { opacity: 1; }
+
+/* Testimonials */
+.collab-section + .testimonials { margin-top: 0; padding-top: clamp(56px, 7vw, 88px); }
+.testimonial-quote { color: var(--aubergine); font-size: 1.12rem; }
+@media (min-width: 901px) {
+  .testimonial-grid { grid-template-columns: repeat(3, 1fr); gap: 48px; }
+}
+
+/* Footer: saffron */
+.site-footer { background: var(--saffron); border-top-color: transparent; }
+.site-footer .copyright, .site-footer .socials .social, .site-footer .footer-links a { color: var(--aubergine); }
+.site-footer .socials .social:hover, .site-footer .footer-links a:hover { color: var(--plaster); }
+
+/* Keep the footer at the bottom on short pages */
+body { min-height: 100vh; display: flex; flex-direction: column; }
+.site-footer { margin-top: auto; }
+
+/* Contact page */
+.contact-statement {
+  font-family: var(--font-serif); font-weight: 400; color: var(--aubergine);
+  font-size: clamp(2rem, 4.4vw, 3.4rem); line-height: 1.1; letter-spacing: -0.015em;
+  font-variation-settings: "opsz" 72; max-width: 22ch; margin-top: clamp(12px, 3vw, 40px);
+}
+.contact-statement em { font-style: italic; color: var(--rose); }
+.contact-actions { margin-top: 40px; }
+.contact-actions .btn { background: var(--saffron); color: var(--aubergine); font-weight: 600; }
+.contact-actions .btn:hover { background: var(--aubergine); color: var(--plaster); }
