@@ -737,7 +737,7 @@ body { background: #fff; color: var(--ink); }
 @media (max-width: 760px) { .p2-grid { grid-template-columns: 1fr; gap: 44px; } }
 .p2-img { position: relative; overflow: hidden; }
 .p2-img .project-logo { left: 22px; bottom: 22px; height: 34px; }
-.p2-img .project-logo.lg { height: 46px; }
+.p2-img .project-logo.lg { height: 66px; }
 .p2-img .project-logo.lower { bottom: 16px; }
 
 /* Contact page: same painting gradient as the collaborators band, filling the page down to the footer */
