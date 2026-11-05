@@ -46,19 +46,24 @@
     }
     .offer-facts p, .coach p { color: var(--ink); max-width: 62ch; }
 
-    .coaches { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+    .coach-photo { display: block; width: 100%; max-width: 360px; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; border-radius: 14px; margin-top: 28px; background: var(--paper-2); }
+    .coach { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, 320px); gap: clamp(32px, 5vw, 72px); align-items: start; }
+    .coach .coach-photo { margin-top: 0; max-width: none; }
+    .offer-rest { padding-bottom: clamp(56px, 8vw, 110px); }
+    .coaches { display: grid; grid-template-columns: 1fr; gap: clamp(48px, 6vw, 80px); }
 
-    .offer-cta { padding-top: clamp(40px, 6vw, 72px); }
-    .offer-cta .contact-statement { max-width: 24ch; margin-top: 0; }
-    .offer-cta .btn { margin-top: 32px; }
 
     @media (max-width: 900px) {
       .offer-facts { grid-template-columns: 1fr; gap: 28px; }
-      .coaches { grid-template-columns: 1fr; gap: 40px; }
+      .coaches { grid-template-columns: 1fr; gap: 48px; }
+      .coach { grid-template-columns: 1fr; gap: 24px; }
+      .coach .coach-photo { max-width: 360px; }
     }
 
     /* Animated story arc (replaces the photo slideshow) */
     .arc { width: 100%; height: auto; display: block; }
+    .case-text .slideshow { margin-top: clamp(28px, 4vw, 44px); max-width: none; }
+    .slideshow .slide img { object-fit: cover; }
     .js-motion .case-media.reveal { opacity: 1; transform: none; transition: none; }
 .arc g, .arc image { transform-box: fill-box; }
 
@@ -156,7 +161,7 @@
         <button type="button" data-set="en">English</button>
       </div>
 
-      <p class="case-tags">Workshop · Storytelling · Visual Thinking</p>
+      <p class="case-tags"><span data-lang="de">Besser kommunizieren mit visuellem Storytelling</span><span data-lang="en">Communicate better through visual storytelling</span></p>
       <h1 class="case-title">Visual Expression &amp; Storytelling</h1>
 
       <div class="case-split split-media">
@@ -172,6 +177,15 @@
             <p class="case-body">We understand stories better than pure logic and information. From keynotes to weekly team meetings, when we bring storytelling into our presentations, our message sticks.</p>
             <p class="case-body">Yet many of us skip the hook, the tension, and the takeaway. We rarely visualize our ideas either, even though that is the best way to develop and share them. Of course, AI can visualize for us. But if we hand that part off too quickly, we lose the ability to think with our hands, make our ideas concrete, and work out the story we want to tell.</p>
             <p class="case-body">In this interactive workshop, you'll build visual storytelling skills through short, playful exercises. No drawing experience needed. You'll leave with concrete ideas you can use in your next presentation.</p>
+          </div>
+          <div class="slideshow" id="slideshow">
+            <div class="slides">
+              <div class="slide is-active"><img src="images/projects/storytelling/slide-1.jpg" alt="Workshop participants sketching at low tables in an open office" /></div>
+              <div class="slide"><img src="images/projects/storytelling/slide-2.jpg" alt="A participant drawing simple icons on paper sheets taped to the wall" /></div>
+            </div>
+            <button class="slide-nav prev" aria-label="Previous image">‹</button>
+            <button class="slide-nav next" aria-label="Next image">›</button>
+            <div class="slide-dots" aria-hidden="true"></div>
           </div>
         </div>
         <div class="case-media">
@@ -242,12 +256,18 @@
         <p class="sea-label">Ihre Workshop-Coaches</p>
         <div class="coaches">
           <div class="coach">
-            <h3>Dr. Mana Taheri</h3>
-            <p>Mana hilft Organisationen und Teams, Komplexität zu verstehen und Veränderungsprozesse zu durchlaufen, und baut dabei durch Programmdesign, Facilitation und praxisnahe Workshops nachhaltige Fähigkeiten auf. Bei Steelcase arbeitete sie als Social Innovation Managerin und entwickelte ein Flagship-Programm (Better Is Possible), das unternehmensweit kollaborative Problemlösung förderte. Sie hat als Innovationscoach an der Hasso Plattner School of Design Thinking (HPI d-school) gearbeitet, wo sie multidisziplinäre Teams von der Problemerkennung bis zum finalen Pitch begleitete. Als Research Fellow des HPI-Stanford Design Thinking Research Program schrieb sie ihre Doktorarbeit darüber, wie der soziokulturelle Kontext das Lernen und Lehren von nutzerzentrierter Problemlösung beeinflusst. Als Illustratorin visualisiert sie komplexe Zusammenhänge und animiert andere zum Zeichnen. Geboren in Teheran und ansässig in Berlin, hat sie von Havanna über Istanbul bis New York gearbeitet, und kulturelle Demut zieht sich durch alles, was sie tut. Sie beschäftigt sich mit der Rolle von Design für mehr Gerechtigkeit, interkultureller Zusammenarbeit, sozialer Innovation und Futures Design.</p>
+            <div class="coach-text">
+              <h3>Dr. Mana Taheri</h3>
+              <p>Mana hilft Organisationen und Teams, Komplexität zu verstehen und Veränderungsprozesse zu durchlaufen, und baut dabei durch Programmdesign, Facilitation und praxisnahe Workshops nachhaltige Fähigkeiten auf. Bei Steelcase arbeitete sie als Social Innovation Managerin und entwickelte ein Flagship-Programm (Better Is Possible), das unternehmensweit kollaborative Problemlösung förderte. Sie hat als Innovationscoach an der Hasso Plattner School of Design Thinking (HPI d-school) gearbeitet, wo sie multidisziplinäre Teams von der Problemerkennung bis zum finalen Pitch begleitete. Als Research Fellow des HPI-Stanford Design Thinking Research Program schrieb sie ihre Doktorarbeit darüber, wie der soziokulturelle Kontext das Lernen und Lehren von nutzerzentrierter Problemlösung beeinflusst. Als Illustratorin visualisiert sie komplexe Zusammenhänge und animiert andere zum Zeichnen. Geboren in Teheran und ansässig in Berlin, hat sie von Havanna über Istanbul bis New York gearbeitet, und kulturelle Demut zieht sich durch alles, was sie tut. Sie beschäftigt sich mit der Rolle von Design für mehr Gerechtigkeit, interkultureller Zusammenarbeit, sozialer Innovation und Futures Design.</p>
+            </div>
+            <img class="coach-photo" src="images/mana-portrait.jpg" alt="Portrait of Dr. Mana Taheri" />
           </div>
           <div class="coach">
-            <h3>Karen von Schmieden</h3>
-            <p>Als Dozentin und Forscherin nutzt Karen ständig Storytelling-Elemente, um ihre Ideen zu vermitteln oder Teams in Arbeitsprozessen zu unterstützen. Sie ist Alumna der HPI School of Design Thinking, wo sie nutzerzentrierte Lösungen entwickelte, sowie des HPI-Stanford Design Thinking Research Program. Gemeinsam mit ihrem Team hat Karen mehrere Massive Open Online Courses entworfen, in die sich bisher mehr als 20.000 Lernende eingeschrieben haben. Für das KI-Servicezentrum Berlin-Brandenburg unterstützte Karen die Konzeption von Workshops zu Themen der Künstlichen Intelligenz in KMUs. Daneben kuratiert sie thisisdesignthinking.net, die größte Sammlung von Fallstudien zum nutzerzentrierten Design in Organisationen.</p>
+            <div class="coach-text">
+              <h3>Karen von Schmieden</h3>
+              <p>Als Dozentin und Forscherin nutzt Karen ständig Storytelling-Elemente, um ihre Ideen zu vermitteln oder Teams in Arbeitsprozessen zu unterstützen. Sie ist Alumna der HPI School of Design Thinking, wo sie nutzerzentrierte Lösungen entwickelte, sowie des HPI-Stanford Design Thinking Research Program. Gemeinsam mit ihrem Team hat Karen mehrere Massive Open Online Courses entworfen, in die sich bisher mehr als 20.000 Lernende eingeschrieben haben. Für das KI-Servicezentrum Berlin-Brandenburg unterstützte Karen die Konzeption von Workshops zu Themen der Künstlichen Intelligenz in KMUs. Daneben kuratiert sie thisisdesignthinking.net, die größte Sammlung von Fallstudien zum nutzerzentrierten Design in Organisationen.</p>
+            </div>
+            <img class="coach-photo" src="images/projects/storytelling/karen.jpg" alt="Portrait of Karen von Schmieden" />
           </div>
         </div>
       </div>
@@ -255,28 +275,23 @@
         <p class="sea-label">Your workshop coaches</p>
         <div class="coaches">
           <div class="coach">
-            <h3>Dr. Mana Taheri</h3>
-            <p>Mana helps organizations and teams make sense of complexity and navigate change, building lasting skills through program design, facilitation, and hands-on workshops. At Steelcase she worked as Social Innovation Manager and developed a flagship program (Better Is Possible) that fostered collaborative problem solving across the company. She worked as an innovation coach at the Hasso Plattner School of Design Thinking (HPI d-school), guiding multidisciplinary teams from problem finding to the final pitch. As a research fellow of the HPI-Stanford Design Thinking Research Program, she wrote her PhD on how socio-cultural context shapes the learning and teaching of human-centered problem solving. As an illustrator, she visualizes complex ideas and encourages others to draw. Born in Tehran and based in Berlin, she has worked from Havana to Istanbul to New York, and cultural humility runs through everything she does. She explores the role of design in advancing equity, intercultural collaboration, social innovation, and futures design.</p>
+            <div class="coach-text">
+              <h3>Dr. Mana Taheri</h3>
+              <p>Mana helps organizations and teams make sense of complexity and navigate change, building lasting skills through program design, facilitation, and hands-on workshops. At Steelcase she worked as Social Innovation Manager and developed a flagship program (Better Is Possible) that fostered collaborative problem solving across the company. She worked as an innovation coach at the Hasso Plattner School of Design Thinking (HPI d-school), guiding multidisciplinary teams from problem finding to the final pitch. As a research fellow of the HPI-Stanford Design Thinking Research Program, she wrote her PhD on how socio-cultural context shapes the learning and teaching of human-centered problem solving. As an illustrator, she visualizes complex ideas and encourages others to draw. Born in Tehran and based in Berlin, she has worked from Havana to Istanbul to New York, and cultural humility runs through everything she does. She explores the role of design in advancing equity, intercultural collaboration, social innovation, and futures design.</p>
+            </div>
+            <img class="coach-photo" src="images/mana-portrait.jpg" alt="Portrait of Dr. Mana Taheri" />
           </div>
           <div class="coach">
-            <h3>Karen von Schmieden</h3>
-            <p>As a lecturer and researcher, Karen constantly uses elements of storytelling to communicate her ideas and to support teams in their work. She is an alumna of the HPI School of Design Thinking, where she developed human-centered solutions, and of the HPI-Stanford Design Thinking Research Program. Together with her team, Karen has designed several Massive Open Online Courses that more than 20,000 learners have enrolled in so far. For the AI Service Center Berlin-Brandenburg, she helped design workshops on artificial intelligence for small and medium-sized businesses. She also curates thisisdesignthinking.net, the largest collection of case studies on human-centered design in organizations.</p>
+            <div class="coach-text">
+              <h3>Karen von Schmieden</h3>
+              <p>As a lecturer and researcher, Karen constantly uses elements of storytelling to communicate her ideas and to support teams in their work. She is an alumna of the HPI School of Design Thinking, where she developed human-centered solutions, and of the HPI-Stanford Design Thinking Research Program. Together with her team, Karen has designed several Massive Open Online Courses that more than 20,000 learners have enrolled in so far. For the AI Service Center Berlin-Brandenburg, she helped design workshops on artificial intelligence for small and medium-sized businesses. She also curates thisisdesignthinking.net, the largest collection of case studies on human-centered design in organizations.</p>
+            </div>
+            <img class="coach-photo" src="images/projects/storytelling/karen.jpg" alt="Portrait of Karen von Schmieden" />
           </div>
         </div>
       </div>
     </div>
 
-    <!-- ===== Contact ===== -->
-    <div class="wrap offer-cta">
-      <div data-lang="de">
-        <p class="contact-statement">Lust auf den Workshop mit Ihrem <em>Team?</em></p>
-        <a class="btn" href="mailto:manataheri@gmail.com?subject=Workshop%20Visual%20Expression%20%26%20Storytelling">Kontakt aufnehmen</a>
-      </div>
-      <div data-lang="en">
-        <p class="contact-statement">Curious how this could work for your <em>team?</em></p>
-        <a class="btn" href="mailto:manataheri@gmail.com?subject=Workshop%20Visual%20Expression%20%26%20Storytelling">Get in touch</a>
-      </div>
-    </div>
   </section>
 
   <script>
@@ -289,6 +304,31 @@
         es.forEach(function (e) { if (e.isIntersecting) { arc.classList.add('play'); io.disconnect(); } });
       }, { threshold: 0.4 });
       io.observe(arc);
+    })();
+  </script>
+  <script>
+    // Workshop photo slideshow
+    (function () {
+      var box = document.getElementById('slideshow');
+      if (!box) return;
+      var slides = box.querySelectorAll('.slide');
+      var dotsWrap = box.querySelector('.slide-dots');
+      var i = 0;
+      slides.forEach(function (s, idx) {
+        var d = document.createElement('button');
+        d.className = 'dot' + (idx === 0 ? ' is-active' : '');
+        d.setAttribute('aria-label', 'Go to image ' + (idx + 1));
+        d.addEventListener('click', function () { go(idx); });
+        dotsWrap.appendChild(d);
+      });
+      var dots = dotsWrap.querySelectorAll('.dot');
+      function go(n) {
+        slides[i].classList.remove('is-active'); dots[i].classList.remove('is-active');
+        i = (n + slides.length) % slides.length;
+        slides[i].classList.add('is-active'); dots[i].classList.add('is-active');
+      }
+      box.querySelector('.next').addEventListener('click', function () { go(i + 1); });
+      box.querySelector('.prev').addEventListener('click', function () { go(i - 1); });
     })();
   </script>
   <script>
