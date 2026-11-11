@@ -44,7 +44,7 @@
     .offer-cols p + p { margin-top: 14px; }
 
     /* Top tab, styled like the language switch on the workshop offer page */
-    .page-tabs { display: flex; justify-content: flex-end; gap: 4px; margin-bottom: 30px; font-family: var(--font-sans); }
+    .page-tabs { display: flex; justify-content: flex-end; gap: 8px; margin-bottom: 30px; font-family: var(--font-sans); }
     .page-tabs a {
       padding: 6px 12px; border: 1px solid var(--ink); border-radius: 2px;
       font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink); transition: color .2s, border-color .2s;
@@ -59,6 +59,7 @@
     }
     .coach p { color: var(--ink); max-width: 62ch; font-size: var(--offer-body); line-height: 1.45; }
     .coach-photo { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; border-radius: 14px; background: var(--paper-2); }
+    .offer-cta .contact-statement { margin-top: 0; }
     #instructor .sea-label { margin-bottom: 30px; }
     .coaches { display: grid; grid-template-columns: 1fr; gap: clamp(48px, 6vw, 80px); }
     @media (max-width: 900px) {
@@ -74,7 +75,7 @@
   <!-- ===== Intro ===== -->
   <section class="case offers-intro">
     <div class="wrap">
-      <nav class="page-tabs" aria-label="On this page"><a href="#instructor">About the instructors</a></nav>
+      <nav class="page-tabs" aria-label="On this page"><a href="#instructor">About the instructors</a><a href="#contact">Contact</a></nav>
       <h1 class="case-title">Learning Experiences for Leaders and Teams</h1>
     </div>
   </section>
@@ -178,6 +179,13 @@
           </div>
           <img class="coach-photo" src="images/projects/storytelling/karen.jpg" alt="Portrait of Karen von Schmieden" />
         </div>
+      </div>
+    </div>
+    <!-- ===== Contact (same closing block as the workshop offer page) ===== -->
+    <div class="wrap offer offer-cta" id="contact">
+      <p class="contact-statement">Curious how this could work for your <em>team?</em></p>
+      <div class="contact-actions">
+        <a class="btn" href="mailto:contact@manataheri.com?subject=Learning%20Experiences%20for%20Leaders%20and%20Teams">Get in touch</a>
       </div>
     </div>
   </section>
