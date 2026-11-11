@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Unlisted page for clients: not linked anywhere on the site, hidden from search engines -->
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <title>Learning Experiences for Leaders and Teams · Dr. Mana Taheri</title>
+  <link rel="stylesheet" href="styles.css?v=61" />
+  <style>
+    /* Page-only additions, built from the shared tokens (same as the workshop offer page) */
+    :root { --offer-body: clamp(1.15rem, 1.8vw, 1.4rem); }
+    .case .case-lead, .offer-cols p { font-size: var(--offer-body); line-height: 1.45; }
+
+    .offers-intro { padding-bottom: 0; }
+    /* No rule above the first workshop */
+    #game-design .offer-title { border-top: none; padding-top: 0; }
+    /* Overview band: matches the workshop offer page's band */
+    .offer-band { margin-top: clamp(8px, 2vw, 24px); }
+    .offer-band .collab-intro { margin-bottom: 24px; }
+    .offer-band .feature-list { gap: 14px; max-width: none; margin-top: 0; }
+    .offer-band .feature-list li { color: var(--ink); font-size: var(--offer-body); line-height: 1.45; }
+    .offer-band .feature-list li::before { content: "·"; font-size: 1.8rem; line-height: 1; top: 0; color: var(--ink); }
+    .offer-band .feature-list a { border-bottom: 1px solid rgba(58,33,48,.35); transition: border-color .2s; }
+    .offer-band .feature-list a:hover { border-bottom-color: var(--ink); }
+    .offer { scroll-margin-top: 24px; }
+    .offer-band .offer-note { color: var(--ink); font-size: var(--offer-body); line-height: 1.45; margin-top: 28px; }
+    .offers { padding-top: 0; padding-bottom: clamp(56px, 8vw, 110px); }
+    .offer { padding-top: clamp(48px, 7vw, 88px); }
+    .offer-title {
+      font-family: var(--font-serif); font-weight: 400; color: var(--ink-soft);
+      font-size: clamp(1.5rem, 2.6vw, 2.3rem); line-height: 1.12; margin-bottom: clamp(24px, 3vw, 36px);
+      padding-top: 26px; border-top: 1px solid var(--ink);
+    }
+    .offer-cols { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 72px); align-items: start; }
+    .offer-cols h3 {
+      font-family: var(--font-sans); font-weight: 300; letter-spacing: -0.03em; color: var(--ink);
+      font-size: clamp(1.4rem, 2.2vw, 1.8rem); line-height: 1.1; margin-bottom: 10px;
+    }
+    .offer-cols p { color: var(--ink); max-width: 62ch; }
+    .offer-cols p + p { margin-top: 14px; }
+
+    /* Top tab, styled like the language switch on the workshop offer page */
+    .page-tabs { display: flex; justify-content: flex-end; gap: 4px; margin-bottom: 30px; font-family: var(--font-sans); }
+    .page-tabs a {
+      padding: 6px 12px; border: 1px solid var(--ink); border-radius: 2px;
+      font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink); transition: color .2s, border-color .2s;
+    }
+    .page-tabs a:hover { color: var(--rose); border-color: var(--rose); }
+
+    /* Instructor profile: copied from the workshop offer page */
+    .coach { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, 320px); gap: clamp(32px, 5vw, 72px); align-items: start; }
+    .coach h3 {
+      font-family: var(--font-sans); font-weight: 300; letter-spacing: -0.03em; color: var(--ink);
+      font-size: clamp(1.4rem, 2.2vw, 1.8rem); line-height: 1.1; margin-bottom: 10px;
+    }
+    .coach p { color: var(--ink); max-width: 62ch; font-size: var(--offer-body); line-height: 1.45; }
+    .coach-photo { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; border-radius: 14px; background: var(--paper-2); }
+    #instructor .sea-label { margin-bottom: 30px; }
+    .coaches { display: grid; grid-template-columns: 1fr; gap: clamp(48px, 6vw, 80px); }
+    @media (max-width: 900px) {
+      .coach { grid-template-columns: 1fr; gap: 24px; }
+      .coach .coach-photo { max-width: 360px; }
+    }
+    @media (max-width: 900px) {
+      .offer-cols { grid-template-columns: 1fr; gap: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== Intro ===== -->
+  <section class="case offers-intro">
+    <div class="wrap">
+      <nav class="page-tabs" aria-label="On this page"><a href="#instructor">About the instructors</a></nav>
+      <h1 class="case-title">Learning Experiences for Leaders and Teams</h1>
+    </div>
+  </section>
+
+  <!-- ===== Overview band (same colour block as the homepage collaborators) ===== -->
+  <section class="collab-section offer-band">
+    <div class="wrap">
+      <p class="collab-intro">We offer hands-on learning experiences on leadership, collaboration, and change:</p>
+      <ul class="feature-list">
+        <li><a href="#game-design">Game Design for Organizational Transformation</a></li>
+        <li><a href="#multipliers">Building Multipliers in Times of Generational Change</a></li>
+        <li><a href="#psychological-safety">Building Psychological Safety: A Practical Workshop for Team Leads</a></li>
+        <li><a href="#norm-design">Norm Design for Lasting Change in Organizations</a></li>
+      </ul>
+      <p class="offer-note">Each can be tailored to your organization, from a single workshop to a longer program.</p>
+    </div>
+  </section>
+
+  <section class="case offers">
+    <!-- ===== Offer 1 ===== -->
+    <div class="wrap offer" id="game-design">
+      <h2 class="offer-title">Game Design for Organizational Transformation</h2>
+      <div class="offer-cols">
+        <div>
+          <h3>Goal</h3>
+          <p>In this workshop, participants explore leadership principles and organizational transformation through designing a game. Rules shape behaviors, in board games and in organizations. Every design decision is also a management decision. Who gets to move first? What happens when someone breaks a rule? Do players cooperate or compete? Which behaviors does the game reward, and which does it quietly punish?</p>
+          <p>Participants design their own game from scratch and, in doing so, work through the topics that matter in leadership and change. Game design is like prototyping a strategy. Because the stakes are low, it is easier to notice what's going on, say it out loud, and try again, which is exactly what psychological safety makes possible in real teams.</p>
+        </div>
+        <div>
+          <h3>Impact</h3>
+          <p>Experienced managers know the vocabulary of culture and change. This workshop enables them to explore those concepts in a hands-on and interactive way.</p>
+          <p>Participants leave with a prototype, a newly formed language for team dynamics, and a concrete idea of how to apply it back at work.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Offer 2 ===== -->
+    <div class="wrap offer" id="multipliers">
+      <h2 class="offer-title">Building Multipliers in Times of Generational Change</h2>
+      <div class="offer-cols">
+        <div>
+          <h3>Goal</h3>
+          <p>In the coming years, many experienced employees will retire. Their experience and practical know-how will leave with them, including the kind of knowledge that is rarely written down: which decisions were tried and dropped, who to call when something goes wrong, and the unwritten rules and norms in the organization.</p>
+          <p>Managers decide whether knowledge sharing gets time and attention or stays a good intention. This workshop helps them move from "knowledge handover" as a last-minute checklist to knowledge sharing as an ongoing practice. Instead of asking how to capture everything, we ask: How might we help experienced employees become multipliers who pass on what matters before they leave, in ways that others actually take up and use? Participants prototype a concrete knowledge-sharing approach for one real case from their own organization and test it in peer feedback rounds.</p>
+        </div>
+        <div>
+          <h3>Impact</h3>
+          <p>The workshop gives managers practical tools and a first plan they can start with right away. Since good knowledge transfer goes both ways, it also sparks exchange between generations.</p>
+          <p>Participants map the critical knowledge in their area, prototype a concrete knowledge-sharing approach that fits their own team and context, and define their own role in launching their first pilot.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Offer 3 ===== -->
+    <div class="wrap offer" id="psychological-safety">
+      <h2 class="offer-title">Building Psychological Safety: A Practical Workshop for Team Leads</h2>
+      <div class="offer-cols">
+        <div>
+          <h3>Goal</h3>
+          <p>Psychological safety is one of the defining prerequisites for teams to collaborate, reduce errors in the long term, work creatively and iteratively, and produce more successful results. This is well established in Amy Edmondson's research and was confirmed in practice by Google's Project Aristotle.</p>
+          <p>In this workshop, participants work through six scenarios to experiment with different context-specific actions and interventions.</p>
+        </div>
+        <div>
+          <h3>Impact</h3>
+          <p>Participants learn why psychological safety matters, through theoretical input and hands-on experience of real collaboration situations. They create concrete strategies to build and sustain it in their own leadership practice.</p>
+        </div>
+      </div>
+    </div>
+    <!-- ===== Offer 4 ===== -->
+    <div class="wrap offer" id="norm-design">
+      <h2 class="offer-title">Norm Design for Lasting Change in Organizations</h2>
+      <div class="offer-cols">
+        <div>
+          <h3>Goal</h3>
+          <p>Many organizations have a clear strategy for change, whether it's more collaboration, faster decisions, or AI adoption. Yet day-to-day behavior stays the same, and even after trainings and workshops, not much changes. Strategy rarely fails because people lack skills or a shared vision. It fails because of hidden norms that exist in every organization and team. Norms are unwritten rules and shared expectations about what is safe, what is easy, what is rewarded or punished, and "how things are done here."</p>
+          <p>In this workshop, participants pick a specific change in their organization and learn to make the invisible visible. They map which norms push the change forward and which quietly hold it back. They then learn to co-design interventions with people in their organization and to track their impact.</p>
+        </div>
+        <div>
+          <h3>Impact</h3>
+          <p>Participants gain a new lens on change, one that considers stakeholders, their context, and the behaviors that persist but go unspoken.</p>
+          <p>They leave with a norm map for one real change from their own organization, prototype interventions that work with those norms rather than against them, and define early signs that behavior is shifting.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Instructors (same profile format as the workshop offer page) ===== -->
+    <div class="wrap offer" id="instructor">
+      <p class="sea-label">About the instructors</p>
+      <div class="coaches">
+        <div class="coach">
+          <div class="coach-text">
+            <h3>Dr. Mana Taheri</h3>
+            <p>Mana helps organizations and teams make sense of complexity and navigate change, building lasting skills through program design, facilitation, and hands-on workshops. At Steelcase she worked as Social Innovation Manager and developed a flagship program (Better Is Possible) that fostered collaborative problem solving across the company. She worked as an innovation coach at the Hasso Plattner School of Design Thinking (HPI d-school), guiding multidisciplinary teams from problem finding to the final pitch. As a research fellow of the HPI-Stanford Design Thinking Research Program, she wrote her PhD on how socio-cultural context shapes the learning and teaching of human-centered problem solving. As an illustrator, she visualizes complex ideas and encourages others to draw. Born in Tehran and based in Berlin, she has worked from Havana to Istanbul to New York, and cultural humility runs through everything she does. She explores the role of design in advancing equity, intercultural collaboration, social innovation, and futures design.</p>
+          </div>
+          <img class="coach-photo" src="images/mana-portrait.jpg" alt="Portrait of Dr. Mana Taheri" />
+        </div>
+        <div class="coach">
+          <div class="coach-text">
+            <h3>Karen von Schmieden</h3>
+            <p>As a lecturer and researcher, Karen constantly uses elements of storytelling to communicate her ideas and to support teams in their work. She is an alumna of the HPI School of Design Thinking, where she developed human-centered solutions, and of the HPI-Stanford Design Thinking Research Program. Together with her team, Karen has designed several Massive Open Online Courses that more than 20,000 learners have enrolled in so far. For the AI Service Center Berlin-Brandenburg, she helped design workshops on artificial intelligence for small and medium-sized businesses. She also curates thisisdesignthinking.net, the largest collection of case studies on human-centered design in organizations.</p>
+          </div>
+          <img class="coach-photo" src="images/projects/storytelling/karen.jpg" alt="Portrait of Karen von Schmieden" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="motion.js?v=2" defer></script>
+</body>
+</html>
