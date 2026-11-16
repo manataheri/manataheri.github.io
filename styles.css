@@ -798,3 +798,7 @@ body { background: #fff; color: var(--ink); }
   .service { grid-template-columns: 1fr; gap: 6px; }
   .service-text { grid-column: 1; }
 }
+
+/* Hero "See some of my work" link: accent color, no underline */
+.lander-hero-text p a.work-link { color: var(--rose); border-bottom: 0; }
+.lander-hero-text p a.work-link:hover { color: var(--ink); }
