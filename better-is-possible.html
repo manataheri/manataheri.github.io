@@ -8,7 +8,7 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <title>Better Is Possible Design Challenge — Dr. Mana Taheri</title>
   <meta name="description" content="A global innovation program at Steelcase bringing employees, clients, and nonprofit partners together to tackle social and environmental challenges." />
-  <link rel="stylesheet" href="styles.css?v=66" />
+  <link rel="stylesheet" href="styles.css?v=70" />
 </head>
 <body>
   <!-- ===== Header ===== -->
@@ -41,9 +41,10 @@
           <p class="case-body">I launched the pilot four months after joining Steelcase. As a newcomer, I had to win the support of leaders who barely knew me, and 11 of them agreed to host the pilot at their offices, in cities including Shanghai, Sydney, Grand Rapids, Monterrey, and Cluj. Within a year, the program ran in 15 cities, with 72 organizations and more than 300 participants.</p>
           <figure class="case-figure inline-photo"><img src="images/projects/bip/slide-5.jpg" alt="A team of facilitators presenting their work" loading="lazy" /></figure>
           <p class="case-body">Designing the materials was an exciting challenge, because I was designing for two groups at once. The facilitators needed to feel confident leading the workshop at their office, even though many had never led one before or had never worked with design thinking. The participants came from different backgrounds and needed materials that were easy to follow. And every workshop had to meet the same standard while leaving room for local adaptation.</p>
+          <p class="case-body">I&rsquo;m proud of how the event grew the Better Futures Community and connected people beyond our offices, from partners and clients to dealers. Best of all, some dealers and nonprofit partners have since run the workshop themselves.</p>
 
         </div>
-        <div class="case-media">
+        <div class="case-media rt-col">
           <aside class="rt" aria-label="Learning materials timeline">
             <p class="rt-ph">Before the workshop</p>
             <div class="rt-item"><span class="rt-dot">0</span><div>
@@ -65,7 +66,7 @@
             <div class="rt-item"><span class="rt-dot">3</span><div>
               <h4 class="mat-title">Instructional videos</h4>
               <p class="mat-for">For participants and facilitators</p>
-              <div class="mat-media js-viewer-video" data-title="Instructional videos" data-video="images/projects/bip/materials/3-video-clip.mp4"><video src="images/projects/bip/materials/3-video-clip.mp4" poster="images/projects/bip/materials/3-video-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Silent excerpt from an instructional video"></video></div><p class="mat-desc">Short videos played for participants at each location, introducing each phase of the problem-solving process and its method, so facilitators of any experience level can run the session.</p>
+              <div class="mat-media js-viewer-video" data-title="Instructional videos" data-video="images/projects/bip/materials/3-video-clip.mp4?v=2"><video src="images/projects/bip/materials/3-video-clip.mp4?v=2" poster="images/projects/bip/materials/3-video-poster.jpg?v=2" autoplay muted loop playsinline preload="metadata" aria-label="Silent excerpt from an instructional video"></video></div><p class="mat-desc">Short videos played for participants, introducing each phase of the problem-solving process, so that facilitators could focus on guiding the teams.</p>
             </div></div>
             <div class="rt-item"><span class="rt-dot">4</span><div>
               <h4 class="mat-title">Recap slides</h4>
@@ -86,11 +87,15 @@
             <div class="rt-item"><span class="rt-dot">7</span><div>
               <h4 class="mat-title">Participant follow-up calls</h4>
               <p class="mat-for">For participants</p>
-              <p class="mat-desc">An overview of the solutions that came out of offices all over the world, and encouragement to implement them.</p>
+              <p class="mat-desc">Calls that shared the solutions developed across all locations and helped participants explore next steps for putting their ideas into practice.</p>
             </div></div>
           </aside>
         </div>
       </div>
+      <blockquote class="case-quote centered">
+            <p>&ldquo;Mana has a rare ability to bring people together around a shared goal. She created the Better Is Possible Design Challenge, now one of Steelcase&rsquo;s flagship programs, and rallied colleagues from across the organization to bring it to life. She earned trust quickly and got people genuinely invested. Her interpersonal skills and stakeholder engagement turned a big, ambitious idea into something our organization and communities around the world wanted to be part of.&rdquo;</p>
+            <footer><span class="case-quote-name">Kim Koeman</span> <span class="case-quote-role">Global Director of Impact, Steelcase</span></footer>
+          </blockquote>
     </div>
   </section>
 
@@ -172,6 +177,22 @@
           if (e.key === 'ArrowLeft') show(i - 1);
         }
       });
+    })();
+  </script>
+  <script>
+    (function () {
+      var col = document.querySelector('.rt-col'), first = document.querySelector('.case-text .case-body');
+      if (!col || !first) return;
+      function align() {
+        col.style.marginTop = '0px';
+        if (window.innerWidth <= 900) return;
+        var d = first.getBoundingClientRect().top - col.getBoundingClientRect().top;
+        col.style.marginTop = Math.max(0, d) + 'px';
+      }
+      window.addEventListener('load', align);
+      window.addEventListener('resize', align);
+      if (document.fonts) document.fonts.ready.then(align);
+      align();
     })();
   </script>
   <script src="lightbox.js?v=2"></script>
